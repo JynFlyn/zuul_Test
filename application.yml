@@ -1,0 +1,19 @@
+server:
+  port: 0
+  #ssl:
+    #enabled: false
+    #key-store: /Users/Eric/eclipse-workspace/client.jks
+    #key-store-password: password123
+    #key-alias: client
+
+spring:
+  application:
+    name: server-1
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eurekaserver-env.xmxxqxu2qc.us-east-2.elasticbeanstalk.com/eureka
+  instance:
+    preferIpAddress: true
+    instance-id: ${random.uuid}
